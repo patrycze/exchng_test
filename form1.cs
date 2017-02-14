@@ -22,7 +22,8 @@ namespace tastTest
         string s = String.Empty;
         double temp, avarage = 0;
         int splitBy = 0;
-
+         List<List<string>> values = new List<List<string>>();
+         
         void loadFile_Click(object sender, EventArgs e)
         {
             using (StreamReader sr = File.OpenText("WIG20.txt"))
@@ -33,31 +34,29 @@ namespace tastTest
                    
                     try
                     {
-                        temp += double.Parse(values[5], CultureInfo.InvariantCulture);
+                        temp += double.Parse(value[5], CultureInfo.InvariantCulture);
                         avarage = temp / ++splitBy;
-                        values.Add(avarage.ToString(CultureInfo.InvariantCulture));
+                        value.Add(avarage.ToString(CultureInfo.InvariantCulture));
+                        values.Add(value);
                     }
                     catch (FormatException)
                     {
                       
                     }
+                    
+                    using (StreamWriter sw = new StreamWriter("WIG_001.txt"))
+                    {
 
+                        sw.WriteLine(s);
+                        foreach (List<string> Value in values)
+                        {
+                            sw.WriteLine(value);
+                        }
+                    }
                 }
             }
         }
 
-        void makeFile(List<string> values)
-        {
-            using (StreamWriter sw = new StreamWriter(filename))
-            {
-                string s = "Header";
-                sw.WriteLine(s);
-                foreach(line in lines)
-                {
-
-                }
-            }
-        }
          void shwResult_Click(object sender, EventArgs e)
         {
            

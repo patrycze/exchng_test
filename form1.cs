@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +20,7 @@ namespace tastTest
         }
 
          
-        void loadFile_Click(object sender, EventArgs e)
+        void shwResult_Click(object sender, EventArgs e)
         {
             string s = String.Empty;
             double temp = 0;
@@ -71,13 +71,18 @@ namespace tastTest
                         }
                     }
                
+                 foreach (List<string> Value in values)
+                    {
+                   
+                        int n = Value[1].IndexOf("2016");
 
+                        if (n != -1)
+                        {
+                            this.chart1.Series["SMA"].Points.AddXY(Value[0], Value[7]);
+                        }
+                }
             }
         }
 
-         void shwResult_Click(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Globalization;
 
+
 namespace tastTest
 {
     public partial class Form1 : Form
@@ -18,6 +19,8 @@ namespace tastTest
         {
             InitializeComponent();
         }
+
+        
         void shwResult_Click(object sender, EventArgs e)
         {
             string s = String.Empty;
@@ -46,7 +49,7 @@ namespace tastTest
                     }
                     catch (FormatException)
                     {
-                    
+
                     }
                 }
 
@@ -60,24 +63,35 @@ namespace tastTest
                     }
                 using (StreamWriter sw = new StreamWriter(path))
                     {
+
+                        //sw.WriteLine(s);
                         foreach (List<string> Value in values)
                         {
                         Value.ForEach(x => sw.Write("{0}\t", x));
                         sw.WriteLine("");
                         }
                     }
-               
-                 foreach (List<string> Value in values)
-                    {
+
+                foreach (List<string> Value in values)
+                {
+                   
                         int n = Value[1].IndexOf("2016");
 
                         if (n != -1)
                         {
                             this.chart1.Series["SMA"].Points.AddXY(Value[0], Value[7]);
                         }
+                    
+                    
                 }
+                
+
+
             }
         }
+
+        
+
 
     }
 }

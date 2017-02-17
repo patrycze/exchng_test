@@ -18,8 +18,6 @@ namespace tastTest
         {
             InitializeComponent();
         }
-
-         
         void shwResult_Click(object sender, EventArgs e)
         {
             string s = String.Empty;
@@ -48,7 +46,7 @@ namespace tastTest
                     }
                     catch (FormatException)
                     {
-
+                    
                     }
                 }
 
@@ -62,8 +60,6 @@ namespace tastTest
                     }
                 using (StreamWriter sw = new StreamWriter(path))
                     {
-
-                        //sw.WriteLine(s);
                         foreach (List<string> Value in values)
                         {
                         Value.ForEach(x => sw.Write("{0}\t", x));
@@ -73,7 +69,6 @@ namespace tastTest
                
                  foreach (List<string> Value in values)
                     {
-                   
                         int n = Value[1].IndexOf("2016");
 
                         if (n != -1)

@@ -1,9 +1,0 @@
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\bin\Debug\tastTest.exe.config
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\obj\Debug\tastTest.exe
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\obj\Debug\tastTest.pdb
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\bin\Debug\tastTest.exe
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\bin\Debug\tastTest.pdb
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\obj\Debug\tastTest.csprojResolveAssemblyReference.cache
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\obj\Debug\tastTest.Form1.resources
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\obj\Debug\tastTest.Properties.Resources.resources
-C:\Users\Pazura\Documents\Visual Studio 2015\Projects\taskTest\tastTest\tastTest\obj\Debug\tastTest.csproj.GenerateResource.Cache

@@ -23,7 +23,8 @@ namespace tastTest
         
          void shwResult_Click(object sender, EventArgs e)
         {
-            shwResult.Enabled = false;
+		// comletely enadled button
+           // shwResult.Enabled = false;
             string s = String.Empty;
             double temp = 0;
             double avarage = 0;
@@ -53,7 +54,7 @@ namespace tastTest
 
                         }
                     }
-                    // uwaga na temat ścieżki
+			// hint about path to file 
                     Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                     int i = 0;
                     string path = "WIG_" + i + ".txt";
@@ -73,7 +74,7 @@ namespace tastTest
                             sw.WriteLine("");
                         }
                     }
-
+						chart1.Series["SMA"].Points.Clear();
                     foreach (List<string> Value in values)
                     {
 

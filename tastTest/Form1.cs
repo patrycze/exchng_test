@@ -23,7 +23,7 @@ namespace tastTest
         
          void shwResult_Click(object sender, EventArgs e)
         {
-		// comletely enadled button
+	   // comletely enadled button
            // shwResult.Enabled = false;
             string s = String.Empty;
             double temp = 0;
@@ -74,7 +74,9 @@ namespace tastTest
                             sw.WriteLine("");
                         }
                     }
-						chart1.Series["SMA"].Points.Clear();
+				chart1.Series["SMA"].Points.Clear();
+				chart1.Series["average"].Points.Clear();
+
                     foreach (List<string> Value in values)
                     {
 
@@ -83,7 +85,8 @@ namespace tastTest
                         if (n != -1)
                         {
                             this.chart1.Series["SMA"].Points.AddXY(Value[0], Value[7]);
-                        }
+			this.chart1.Series["average"].Points.AddXY(Value[0], Value[5]);	                       
+ 		    }
 
 
                     }

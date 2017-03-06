@@ -56,9 +56,13 @@ namespace tastTest
             double avarage = 0;
             int splitBy = 0;
             List<Data> values = new List<Data>();
-            
-                using (StreamReader sr = File.OpenText("WIG20.txt"))
+            string path = System.Windows.Forms.Application.StartupPath + "../../../data/WIG20.txt";
+            //System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "../../../data/WIG20.txt";
+            //Environment.GetFolderPath(Environment.SpecialFolder.Windows);
+
+            using (StreamReader sr = File.OpenText(path))
                 {
+                
                     while ((s = sr.ReadLine()) != null)
                     {
                     List<string> value = new List<string>(s.Split(','));
@@ -83,9 +87,9 @@ namespace tastTest
                         }
                     }
                     // uwaga na temat ścieżki
-                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    
                     int i = 0;
-                    string path = "WIG_" + i + ".txt";
+                    path = System.Windows.Forms.Application.StartupPath + "/WIG_" + i + ".txt";
 
                     while (File.Exists(path))
                     {

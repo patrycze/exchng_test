@@ -46,20 +46,21 @@ namespace tastTest
 
 
         }
+
+
+
         
          void shwResult_Click(object sender, EventArgs e)
         {
             // blokada przycisku
-           // shwResult.Enabled = false;
+            // shwResult.Enabled = false;
             string s = String.Empty;
             double temp = 0;
             double avarage = 0;
             int splitBy = 0;
             List<Data> values = new List<Data>();
             string path = System.Windows.Forms.Application.StartupPath + "../../../data/WIG20.txt";
-            //System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "../../../data/WIG20.txt";
-            //Environment.GetFolderPath(Environment.SpecialFolder.Windows);
-
+            
             using (StreamReader sr = File.OpenText(path))
                 {
                 
@@ -80,7 +81,7 @@ namespace tastTest
                         avarage = temp / ++splitBy;
                         avarage = Math.Round(avarage, 2);
                         objekt.Average = avarage.ToString(CultureInfo.InvariantCulture);
-                    }
+                        }
                         catch (FormatException)
                         {
 
@@ -108,9 +109,10 @@ namespace tastTest
                             sw.WriteLine("");
                         }
                     }
+                    
                 chart1.Series["SMA"].Points.Clear();
-                chart1.Series["average"].Points.Clear();
-                
+                chart1.Series["Avarage"].Points.Clear();
+
 
                 foreach (var Value in values)
                     {
@@ -122,7 +124,7 @@ namespace tastTest
                     if (n != -1)
                         {
                         this.chart1.Series["SMA"].Points.AddXY(Value.Date, Value.Average);
-                        this.chart1.Series["average"].Points.AddXY(Value.Date, Value.Close);
+                        this.chart1.Series["Avarage"].Points.AddXY(Value.Date, Value.Close);
                         }
                     
                 }
@@ -131,6 +133,9 @@ namespace tastTest
                 
         }
 
-       
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
